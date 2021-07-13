@@ -288,24 +288,101 @@ kata13();
 
 function kata14() {
     // implemente o código do kata 14 aqui
+    let title14 = document.createElement("h3");
+    title14.innerText="O quadrado de cada elemento de sampleArray";
+
+    let resContainer14 = document.createElement("p");
+    let sqr = 0;
+    for(let cont=0; cont < sampleArray.length; cont++){
+        sqr = sampleArray[cont]*sampleArray[cont];
+        resContainer14.append(sqr+" | ");
+    }
+
+    showResults(title14,resContainer14);
+}
+kata14();
+
+//Função criada para usar a Soma de Gauss 
+//Para a resolução do kata 15
+function somaGauss(n){
+    let total = n+1
+    let half = n/2;
+
+    return half*total;
 }
 
 function kata15() {
     // implemente o código do kata 15 aqui
+    let title15 = document.createElement("h3");
+    title15.innerText="Exibir a soma de todos os números de 1 a 20.";
+
+    let resContainer15 = document.createElement("p");
+    let nTotal = 20;
+    // Soma de Gauss
+    let sum = somaGauss(nTotal);
+
+    resContainer15.append(" | "+sum+" | ");
+    showResults(title15,resContainer15);
 }
+kata15();
 
 function kata16() {
     // implemente o código do kata 16 aqui
+    let title16 = document.createElement("h3");
+    title16.innerText="Exibir a soma de todos os elementos de sampleArray";
+
+    let resContainer16 = document.createElement("p");
+    let sum=0;
+    for(let cont = 0; cont < sampleArray.length; cont++){
+        sum = sampleArray[cont]+sum;
+    }
+  
+    // Soma de Gauss
+    // let sum = somaGauss(nTotal); <--não funcionou aqui
+
+    // RESULTADO --> 9096
+    resContainer16.append(" | "+sum+" | ");
+    showResults(title16,resContainer16);
 }
+kata16();
 
 function kata17() {
     // implemente o código do kata 17 aqui
+    let title17 = document.createElement("h3");
+    title17.innerText="Exibir o menor elemento de sampleArray";
+
+    let resContainer17 = document.createElement("p");
+    let smallNum = sampleArray[0];
+    for(let cont = 0; cont < sampleArray.length; cont++){
+        if(sampleArray[cont]<smallNum){
+            smallNum = sampleArray[cont];
+        }
+    }
+    // RESULTADO --> 20
+    resContainer17.append(" | "+smallNum+" | ");
+    showResults(title17,resContainer17);
 }
+kata17();
 
 function kata18() {
     // implemente o código do kata 18 aqui
-}
+    let title18 = document.createElement("h3");
+    title18.innerText="Exibir o maior elemento de sampleArray";
 
+    resContainer18 = document.createElement("p");
+    let bigNum = sampleArray[0];
+    for(let cont = 0; cont < sampleArray.length; cont++){
+        if(sampleArray[cont]>bigNum){
+            bigNum = sampleArray[cont];
+        }
+    }
+    // RESULTADO --> 940
+    resContainer18.append(" | "+bigNum+" | ");
+    showResults(title18, resContainer18);
+}
+kata18();
+
+//TENHO É MEDO
 /**
  * Daqui em diante são os bônus, por sua conta e risco
  */
