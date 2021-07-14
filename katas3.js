@@ -26,13 +26,14 @@ function kata1() {
         
         arrRes1[cont] = num;
         num++
+        
     }
-
+    
     console.log(arrRes1);
 
     resContainer1.append(arrRes1);
 
-    showResults(title1,resContainer1);
+    return showResults(title1,resContainer1);
 }
 kata1();
 
@@ -57,7 +58,7 @@ function kata2() {
 
     resContainer2.append(arrRes2);
 
-    showResults(title2,resContainer2);
+    return showResults(title2,resContainer2);
 }
 kata2();
 
@@ -82,7 +83,7 @@ function kata3() {
 
     resContainer3.append(arrRes3);
 
-    showResults(title3,resContainer3);
+    return showResults(title3,resContainer3);
 }
 kata3();
 
@@ -104,7 +105,7 @@ function kata4() {
 
     resContainer4.append(arrRes4);
 
-    showResults(title4,resContainer4);
+    return showResults(title4,resContainer4);
 }
 kata4();
 function kata5() {
@@ -123,7 +124,7 @@ function kata5() {
         num--;  
     }
 
-    showResults(title5,resContainer5);  
+    return showResults(title5,resContainer5);  
 }
 kata5();
 
@@ -144,7 +145,7 @@ function kata6() {
         num++
     }
 
-    showResults(title6,resContainer6);  
+    return showResults(title6,resContainer6);  
 }
 kata6();
 
@@ -165,7 +166,7 @@ function kata7() {
         num++
     }
 
-    showResults(title7,resContainer7);  
+    return showResults(title7,resContainer7);  
 }
 kata7();
 
@@ -189,7 +190,7 @@ function kata8() {
         num--
     }
 
-    showResults(title8,resContainer8);  
+    return showResults(title8,resContainer8);  
 }
 kata8();
 
@@ -210,7 +211,7 @@ function kata9() {
         num++
     }
 
-    showResults(title9,resContainer9);  
+    return showResults(title9,resContainer9);  
 }
 kata9();
 
@@ -229,7 +230,7 @@ function kata10() {
         
     }
 
-    showResults(title10,resContainer10);  
+    return showResults(title10,resContainer10);  
 }
 kata10();
 
@@ -248,7 +249,7 @@ function kata11() {
         }
     }
 
-    showResults(title11,resContainer11);  
+    return showResults(title11,resContainer11);  
 }
 kata11();
 
@@ -265,7 +266,7 @@ function kata12() {
         resContainer12.append(sampleArray[cont]+" | ");
         }
     }
-    showResults(title12,resContainer12);
+    return showResults(title12,resContainer12);
 }
 kata12();
 
@@ -282,7 +283,7 @@ function kata13() {
         resContainer13.append(sampleArray[cont]+" | ");
         }
     }
-    showResults(title13,resContainer13);
+    return showResults(title13,resContainer13);
 }
 kata13();
 
@@ -298,7 +299,7 @@ function kata14() {
         resContainer14.append(sqr+" | ");
     }
 
-    showResults(title14,resContainer14);
+    return showResults(title14,resContainer14);
 }
 kata14();
 
@@ -322,7 +323,7 @@ function kata15() {
     let sum = somaGauss(nTotal);
 
     resContainer15.append(" | "+sum+" | ");
-    showResults(title15,resContainer15);
+    return showResults(title15,resContainer15);
 }
 kata15();
 
@@ -342,7 +343,7 @@ function kata16() {
 
     // RESULTADO --> 9096
     resContainer16.append(" | "+sum+" | ");
-    showResults(title16,resContainer16);
+    return showResults(title16,resContainer16);
 }
 kata16();
 
@@ -360,7 +361,7 @@ function kata17() {
     }
     // RESULTADO --> 20
     resContainer17.append(" | "+smallNum+" | ");
-    showResults(title17,resContainer17);
+    return showResults(title17,resContainer17);
 }
 kata17();
 
@@ -374,11 +375,12 @@ function kata18() {
     for(let cont = 0; cont < sampleArray.length; cont++){
         if(sampleArray[cont]>bigNum){
             bigNum = sampleArray[cont];
+            
         }
     }
     // RESULTADO --> 940
     resContainer18.append(" | "+bigNum+" | ");
-    showResults(title18, resContainer18);
+    return showResults(title18, resContainer18);
 }
 kata18();
 
